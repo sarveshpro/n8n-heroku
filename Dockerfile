@@ -1,7 +1,10 @@
 FROM ubuntu:latest
 
+RUN adduser -D docker
+USER docker
+
 # Install Node.js
-RUN sudo apt-get -y --no-install-recommends install \
+RUN apt-get -y --no-install-recommends install \
   curl 
 RUN apt-get install --yes curl
 RUN curl --silent --location https://deb.nodesource.com/setup_4.x | sudo bash -
@@ -23,6 +26,3 @@ EXPOSE  8080
 # CMD ["node", "/src/index.js"]
 
 RUN n8n
-
-# RUN adduser -D docker
-# USER docker
