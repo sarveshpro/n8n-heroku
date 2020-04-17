@@ -1,6 +1,8 @@
 FROM ubuntu:latest
 
 # Install Node.js
+RUN sudo apt-get -y --no-install-recommends install \
+  curl 
 RUN apt-get install --yes curl
 RUN curl --silent --location https://deb.nodesource.com/setup_4.x | sudo bash -
 RUN apt-get install --yes nodejs
