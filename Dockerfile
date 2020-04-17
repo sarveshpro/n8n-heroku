@@ -43,7 +43,7 @@ FROM n8nio/n8n
 # CMD ["node", "/src/index.js"]
 ENV NODE_ICU_DATA /usr/local/lib/node_modules/full-icu
 
-WORKDIR /data
+#WORKDIR /data
 
 RUN ls -l
 
