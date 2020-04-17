@@ -1,4 +1,3 @@
- FROM docker
 
 # Install Node.js
 #RUN apt-get -y --no-install-recommends install \
