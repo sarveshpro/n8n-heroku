@@ -9,7 +9,7 @@
 
 # FROM node:lts
 
-FROM n8nio/n8n
+# FROM n8nio/n8n
 
 # RUN adduser --disabled-password docker
 # USER docker
@@ -44,7 +44,7 @@ FROM n8nio/n8n
 
 #WORKDIR /data
 
-RUN docker create --name n8n n8nio/n8n 
+# RUN docker create --name n8n n8nio/n8n 
 
 # RUN n8n
 #ENTRYPOINT ["/tini", "--", "docker-entrypoint.sh"]
