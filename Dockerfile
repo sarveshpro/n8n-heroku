@@ -10,14 +10,20 @@ FROM ubuntu:latest
 
 FROM node:lts
 
-RUN adduser --disabled-password docker
-USER docker
+# RUN adduser --disabled-password docker
+# USER docker
 
 # Bundle app source
 # Trouble with COPY http://stackoverflow.com/a/30405787/2926832
 # COPY . /src
 
-RUN cd /home/docker
+# RUN cd /home/docker
+
+RUN cd /home
+
+RUN mkdir my-app
+
+RUN cd my-app
 
 RUN ls -l
 
