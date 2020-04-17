@@ -29,9 +29,9 @@ RUN ls -l
 
 # Install app dependencies
 # RUN cd /src; npm install; npm install -g n8n;
-RUN npm install n8n;
+RUN npm install -g n8n;
 
-RUN export PATH=./node_modules/.bin:$PATH
+# RUN export PATH=./node_modules/.bin:$PATH
 
 # Binds to port 8080
 EXPOSE  5678
