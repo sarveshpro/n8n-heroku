@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
-# RUN adduser --disabled-password docker
-# USER docker
+RUN adduser --disabled-password docker
+USER docker
 
 # Install Node.js
 #RUN apt-get -y --no-install-recommends install \
