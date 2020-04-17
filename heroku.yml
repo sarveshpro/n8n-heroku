@@ -1,5 +1,5 @@
 build:
     docker:
         web: Dockerfile
-#run:
-#    web: n8n
+run:
+    web: docker start n8n
