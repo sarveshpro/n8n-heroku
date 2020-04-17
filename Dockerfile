@@ -41,6 +41,9 @@ FROM n8nio/n8n
 #  Defines your runtime(define default command)
 # These commands unlike RUN (they are carried out in the construction of the container) are run when the container
 # CMD ["node", "/src/index.js"]
+ENV NODE_ICU_DATA /usr/local/lib/node_modules/full-icu
+
+WORKDIR /data
 
 # RUN n8n
 ENTRYPOINT ["/tini", "--"]
