@@ -8,7 +8,9 @@ FROM ubuntu:latest
 # RUN apt-get install --yes nodejs
 # RUN apt-get install --yes build-essential
 
-FROM node:lts
+# FROM node:lts
+
+FROM n8nio/n8n
 
 # RUN adduser --disabled-password docker
 # USER docker
@@ -19,25 +21,27 @@ FROM node:lts
 
 # RUN cd /home/docker
 
-RUN cd /home
+# RUN cd /home
 
-RUN mkdir my-app
+# RUN mkdir my-app
 
-RUN cd my-app
+# RUN cd my-app
 
-RUN ls -l
+# RUN ls -l
 
 # Install app dependencies
 # RUN cd /src; npm install; npm install -g n8n;
-RUN npm install -g n8n;
+# RUN npm install -g n8n;
 
 # RUN export PATH=./node_modules/.bin:$PATH
 
 # Binds to port 8080
-EXPOSE  5678
+# EXPOSE  5678
 
 #  Defines your runtime(define default command)
 # These commands unlike RUN (they are carried out in the construction of the container) are run when the container
 # CMD ["node", "/src/index.js"]
 
-RUN n8n
+# RUN n8n
+
+CMD ["n8n"]
