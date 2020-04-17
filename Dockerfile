@@ -1,4 +1,4 @@
-# FROM ubuntu:latest
+ FROM docker
 
 # Install Node.js
 #RUN apt-get -y --no-install-recommends install \
@@ -45,7 +45,7 @@ FROM n8nio/n8n
 
 #WORKDIR /data
 
-#RUN ls -l
+RUN docker create --name n8n n8nio/n8n 
 
 # RUN n8n
 #ENTRYPOINT ["/tini", "--", "docker-entrypoint.sh"]
