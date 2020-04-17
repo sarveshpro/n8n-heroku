@@ -46,5 +46,5 @@ ENV NODE_ICU_DATA /usr/local/lib/node_modules/full-icu
 WORKDIR /data
 
 # RUN n8n
-ENTRYPOINT ["/tini", "--"]
-CMD ["n8n"]
+ENTRYPOINT ["/tini", "--", "/docker-entrypoint.sh"]
+#CMD ["n8n"]
