@@ -19,9 +19,7 @@ USER docker
 
 RUN cd /home/docker
 
-RUN mkdir my-app
-
-RUN cd my-app
+RUN ls -l
 
 # Install app dependencies
 # RUN cd /src; npm install; npm install -g n8n;
