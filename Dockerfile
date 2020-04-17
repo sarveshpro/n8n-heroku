@@ -1,8 +1,5 @@
 FROM ubuntu:latest
 
-RUN adduser --disabled-password docker
-USER docker
-
 # Install Node.js
 #RUN apt-get -y --no-install-recommends install \
  # curl 
@@ -12,6 +9,9 @@ USER docker
 # RUN apt-get install --yes build-essential
 
 FROM node:lts
+
+RUN adduser --disabled-password docker
+USER docker
 
 # Bundle app source
 # Trouble with COPY http://stackoverflow.com/a/30405787/2926832
