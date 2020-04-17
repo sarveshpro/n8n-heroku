@@ -43,5 +43,5 @@ FROM n8nio/n8n
 # CMD ["node", "/src/index.js"]
 
 # RUN n8n
-
+ENTRYPOINT ["/tini", "--"]
 CMD ["n8n"]
