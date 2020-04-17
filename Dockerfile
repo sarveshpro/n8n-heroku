@@ -17,6 +17,10 @@ USER docker
 # Trouble with COPY http://stackoverflow.com/a/30405787/2926832
 # COPY . /src
 
+RUN mkdir my-app
+
+RUN cd my-app
+
 # Install app dependencies
 # RUN cd /src; npm install; npm install -g n8n;
 RUN npm install n8n;
