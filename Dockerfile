@@ -17,6 +17,8 @@ USER docker
 # Trouble with COPY http://stackoverflow.com/a/30405787/2926832
 # COPY . /src
 
+RUN cd /home/docker
+
 RUN mkdir my-app
 
 RUN cd my-app
