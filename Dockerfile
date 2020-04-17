@@ -19,7 +19,7 @@ USER docker
 
 # Install app dependencies
 # RUN cd /src; npm install; npm install -g n8n;
-RUN npm install -g n8n;
+RUN npm install n8n;
 
 # Binds to port 8080
 EXPOSE  5678
