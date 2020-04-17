@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-RUN adduser -D docker
+RUN adduser --disabled-password docker
 USER docker
 
 # Install Node.js
