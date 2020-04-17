@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+# FROM ubuntu:latest
 
 # Install Node.js
 #RUN apt-get -y --no-install-recommends install \
@@ -12,8 +12,8 @@ FROM ubuntu:latest
 
 FROM n8nio/n8n
 
-RUN adduser --disabled-password docker
-USER docker
+# RUN adduser --disabled-password docker
+# USER docker
 
 # Bundle app source
 # Trouble with COPY http://stackoverflow.com/a/30405787/2926832
