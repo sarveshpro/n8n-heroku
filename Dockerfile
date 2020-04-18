@@ -1,51 +1,17 @@
+FROM node:12.16-alpine
 
-# Install Node.js
-#RUN apt-get -y --no-install-recommends install \
- # curl 
-# RUN sudo apt-get install --yes curl
-# RUN curl --silent --location https://deb.nodesource.com/setup_4.x | sudo bash -
-# RUN apt-get install --yes nodejs
-# RUN apt-get install --yes build-essential
+# Update everything and install needed dependencies
+RUN apk add --update graphicsmagick tzdata git bash su-exec
 
-# FROM node:lts
+# # Set a custom user to not have n8n run as root
+USER root
 
-# FROM n8nio/n8n
+# Install n8n and the also temporary all the packages
+# it needs to build it correctly.
+RUN apk --update add --virtual build-dependencies python build-base ca-certificates && \
+	npm_config_user=root npm install -g n8n && \
+	apk del build-dependencies
 
-# RUN adduser --disabled-password docker
-# USER docker
-
-# Bundle app source
-# Trouble with COPY http://stackoverflow.com/a/30405787/2926832
-# COPY . /src
-
-# RUN cd /home/docker
-
-# RUN cd /home
-
-# RUN mkdir my-app
-
-# RUN cd my-app
-
-# RUN ls -l
-
-# Install app dependencies
-# RUN cd /src; npm install; npm install -g n8n;
-# RUN npm install -g n8n;
-
-# RUN export PATH=./node_modules/.bin:$PATH
-
-# Binds to port 8080
-# EXPOSE  5678
-
-#  Defines your runtime(define default command)
-# These commands unlike RUN (they are carried out in the construction of the container) are run when the container
-# CMD ["node", "/src/index.js"]
-#ENV NODE_ICU_DATA /usr/local/lib/node_modules/full-icu
-
-#WORKDIR /data
-
-# RUN docker create --name n8n n8nio/n8n 
-
-# RUN n8n
-#ENTRYPOINT ["/tini", "--", "docker-entrypoint.sh"]
-#CMD ["n8n"]
+COPY ./start.sh /
+RUN chmod +x /start.sh
+ENTRYPOINT ["/start.sh"]

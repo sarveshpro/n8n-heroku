@@ -1,4 +1,3 @@
 build:
-    web: npm install -g n8n
-run:
-    web: npm start n8n
+    docker:
+        web: Dockerfile
