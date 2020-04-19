@@ -74,3 +74,7 @@ release new build
 <br />
 
 Maybe now you can specify which N8N version to install by Setting a Environment Variable N8N_VERSION or with a build time argument of the same. Not tested yet though, create an issue if it does't work. CI is passing so it is working correctly with default values.
+
+### Sources
+
+https://github.com/n8n-io/n8n
