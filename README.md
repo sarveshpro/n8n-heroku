@@ -65,6 +65,6 @@ build and push container image to heroku
 
     heroku container:push web --app APP_NAME
     
-release
+release new build
 
     heroku container:release web --app APP_NAME
