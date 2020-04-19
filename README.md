@@ -2,7 +2,7 @@
 
 ### n8n(Nodemation) - Free and Open Workflow Automation Tool
 
-This is a heroku focused container implementation for the [n8n Automation Tool]. Just connect your fork of this repo to heroku and let it work as a charm!
+This is a [Heroku](https://heroku.com/) focused container implementation for the [n8n Automation Tool](https://n8n.io/). Just connect your fork of this repo to heroku and let it work as a charm!
 
 ## Requirements
 * Heroku CLI
@@ -50,6 +50,3 @@ build and push container image to heroku
 release
 
     heroku container:release web --app APP_NAME
-
-
-[n8n Automation Tool](https://n8n.io/)
