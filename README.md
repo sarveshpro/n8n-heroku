@@ -1,5 +1,14 @@
 # n8n-heroku
 
+![Docker](https://github.com/sarveshwarge/n8n-heroku/workflows/Docker/badge.svg)
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sarveshwarge/n8n-heroku/tree/develop)
+
+New method, just click, configure and get your n8n running.
+Also, now you can simply connect this Github repo and deploy, heroku uses default configuration from app.json
+
+default basic auth is user:pass
+
 ### n8n(Nodemation) - Free and Open Workflow Automation Tool
 
 This is a [Heroku](https://heroku.com/) focused container implementation for the [n8n Automation Tool](https://n8n.io/). Just connect your fork of this repo to heroku and let it work as a charm!
@@ -9,7 +18,7 @@ This is a [Heroku](https://heroku.com/) focused container implementation for the
 
 ## Setup
 
-you need to prepare your heroku app before deploying this project. given below in 3 simple steps!
+this is old setup guide not required now, connect this Github repo to heroku to auto configure. or click the above button to deploy without Github.
 
 ### STEP 1: CHANGE your App Stack to container
 you can change your app's stack using heroku cli, make sure you have heroku cli installed.
@@ -27,6 +36,23 @@ It's recommended that you enable basic authentication when deployingn n8n on web
     N8N_BASIC_AUTH_ACTIVE=true
     N8N_BASIC_AUTH_USER=SET_USERNAME
     N8N_BASIC_AUTH_PASSWORD=SET_PASSWORD
+    
+Using filesystem/sqlite as storage will destroy any workflows on new builds/releases it it recommended to use mongodb or postgreSQL as the drivers are built into the code.
+
+    DB_TYPE=mongodb
+    DB_MONGODB_CONNECTION_URL=mongodb://MONGODB_USERNAME:MONGODB_PASSWORD@HOST:PORT/MONGODB_DATABASE
+
+you will get the connection string in the heroku mongodb addon or any service you choose. using heroku addons is recommended as they auto configure ENV Variables for you. just copy MONGODB_URI to DB_MONGODB_CONNECTION_URL. that's it.
+
+Same process is to be followed for using postgreSQL.
+    
+    DB_TYPE=postgresdb
+    DB_POSTGRESDB_HOST=POSTGRES_HOST
+    DB_POSTGRESDB_PORT=POSTGRES_PORT
+    DB_POSTGRESDB_DATABASE=POSTGRES_DB
+    DB_POSTGRESDB_USER=POSTGRES_USER
+    DB_POSTGRESDB_PASSWORD=POSTGRES_PASSWORD
+    
 
 ### STEP 3: DONE! Now CONNECT Github repo and Deploy.
 
@@ -72,3 +98,11 @@ release new build
 <br />
 
 Maybe now you can specify which N8N version to install by Setting a Environment Variable N8N_VERSION or with a build time argument of the same. Not tested yet though, create an issue if it does't work. CI is passing so it is working correctly with default values.
+
+_Update - To set n8n version you can pass a argument when deploying using container registry_
+
+    heroku container:push web --arg N8N_VERSION=0.60.0 --app APP_NAME
+
+### Sources
+
+https://github.com/n8n-io/n8n
