@@ -17,7 +17,7 @@ This is a [Heroku](https://heroku.com/) focused container implementation for the
 
 ## Setup
 
-you need to prepare your heroku app before deploying this project. given below in 3 simple steps!
+this is old setup guide not required now, just press the above button to deploy without Github or connect this Github repo to heroku to auto configure.
 
 ### STEP 1: CHANGE your App Stack to container
 you can change your app's stack using heroku cli, make sure you have heroku cli installed.
