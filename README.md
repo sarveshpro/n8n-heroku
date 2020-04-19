@@ -46,7 +46,7 @@ cd into your project directory
 login into heroku account
     
     heroku login
-    
+
 create heroku app
 
     heroku create APP_NAME
