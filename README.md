@@ -29,6 +29,23 @@ It's recommended that you enable basic authentication when deployingn n8n on web
     N8N_BASIC_AUTH_ACTIVE=true
     N8N_BASIC_AUTH_USER=SET_USERNAME
     N8N_BASIC_AUTH_PASSWORD=SET_PASSWORD
+    
+Using filesystem/sqlite as storage will destroy any workflows on new builds/releases it it recommended to use mongodb or postgreSQL as the drivers are built into the code.
+
+    DB_TYPE=mongodb
+    DB_MONGODB_CONNECTION_URL=mongodb://MONGODB_USERNAME:MONGODB_PASSWORD@HOST:PORT/MONGODB_DATABASE
+
+you will get the connection string in the heroku mongodb addon or any service you choose. using heroku addons is recommended as they auto configure ENV Variables for you. just copy MONGODB_URI to DB_MONGODB_CONNECTION_URL. that's it.
+
+Same process is to be followed for using postgreSQL.
+    
+    DB_TYPE=postgresdb
+    DB_POSTGRESDB_HOST=POSTGRES_HOST
+    DB_POSTGRESDB_PORT=POSTGRES_PORT
+    DB_POSTGRESDB_DATABASE=POSTGRES_DB
+    DB_POSTGRESDB_USER=POSTGRES_USER
+    DB_POSTGRESDB_PASSWORD=POSTGRES_PASSWORD
+    
 
 ### STEP 3: DONE! Now CONNECT Github repo and Deploy.
 
