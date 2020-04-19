@@ -19,11 +19,13 @@ you can change your app's stack using heroku cli, make sure you have heroku cli 
 replace APP_NAME with your heroku app name
 
 ### STEP 2: ADD Config Vars for enabling basic authentication (Optional)
-You need to set the following Environment Variables(Config Vars) in your App settings
+It's recommended that you enable basic authentication when deployingn n8n on web. You need to set the following Environment Variables(Config Vars) in your App settings.
 
     N8N_BASIC_AUTH_ACTIVE=true
     N8N_BASIC_AUTH_USER=SET_USERNAME
     N8N_BASIC_AUTH_PASSWORD=SET_PASSWORD
+
+### STEP 3: DONE! Now CONNECT Github repo and Deploy.
 
 
     
