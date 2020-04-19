@@ -8,14 +8,14 @@ on:
 
     # Publish `v1.2.3` tags as releases.
     tags:
-      - v*
+      - v1
 
   # Run tests for any PRs.
   pull_request:
 
 env:
   # TODO: Change variable to your image's name.
-  IMAGE_NAME: image
+  IMAGE_NAME: n8n-heroku
 
 jobs:
   # Run tests.
