@@ -2,7 +2,7 @@
 
 ![Docker](https://github.com/sarveshwarge/n8n-heroku/workflows/Docker/badge.svg)
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sarveshwarge/n8n-heroku/tree/develop)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sarveshwarge/n8n-heroku/tree/develop)    <- New method, just click, configure and get your n8n running.
 
 ### n8n(Nodemation) - Free and Open Workflow Automation Tool
 
