@@ -30,5 +30,23 @@ It's recommended that you enable basic authentication when deployingn n8n on web
 
 ### STEP 3: DONE! Now CONNECT Github repo and Deploy.
 
+## Using Container Registry
 
+you can also deploy this project using container registry (requires aditional requirements installed). Just clone/download this repository on your local machine.
+
+### Additional Requirements (for building on local)
+* docker
+* docker-compose
+
+### Steps
+cd into your project directory
+
+    cd n8n-heroku/
+
+build and push container image to heroku
+
+    heroku container:push web --app APP_NAME
     
+release
+
+    heroku container:release web --app APP_NAME
