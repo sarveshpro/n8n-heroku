@@ -20,6 +20,7 @@ replace APP_NAME with your heroku app name
 
 ### STEP 2: ADD Config Vars for enabling basic authentication (Optional)
 You need to set the following Environment Variables(Config Vars) in your App settings
+
     N8N_BASIC_AUTH_ACTIVE=true
     N8N_BASIC_AUTH_USER=SET_USERNAME
     N8N_BASIC_AUTH_PASSWORD=SET_PASSWORD
