@@ -5,6 +5,9 @@
 This is a heroku focused container implementation for the n8n Automation Tool. Just connect your fork of this repo to heroku and let it work as a charm!
 
 ## Requirements
+* Heroku CLI
+
+## Setup
 
 you need to prepare your heroku app before deploying this project. given below in 3 simple steps!
 
