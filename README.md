@@ -6,6 +6,7 @@
 
 New method, just click, configure and get your n8n running.
 Also, now you can simply connect this Github repo and deploy, heroku uses default configuration from app.json
+
 default basic auth is user:pass
 
 ### n8n(Nodemation) - Free and Open Workflow Automation Tool
