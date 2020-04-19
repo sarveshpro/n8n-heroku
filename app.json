@@ -1,0 +1,50 @@
+{
+    "name": "n8n",
+    "description": "n8n is free and open workflow automation tool",
+    "keywords": [
+      "n8n",
+      "node",
+      "automation"
+    ],
+    "website": "https://n8n.io",
+    "repository": "https://github.com/sarveshwarge/n8n-heroku",
+    "logo": "https://raw.githubusercontent.com/n8n-io/n8n/master/docs/images/n8n-logo.png",
+    "success_url": "/",
+    "stack": "container",
+    "env": {
+      "N8N_BASIC_AUTH_ACTIVE": {
+        "description": "Protect n8n setup with basic authentication.",
+        "value": "true"
+      },
+      "GENERIC_TIMEZONE": {
+        "description": "Time Zone to use with Heroku.",
+        "value": "Asia/Kolkata"
+      },
+      "N8N_BASIC_AUTH_USER": {
+        "description": "Basic Authentication User for n8n",
+        "value": "user"
+      },
+      "N8N_BASIC_AUTH_PASSWORD": {
+        "description": "Basic Authentication Password to secure n8n.",
+        "value": "pass"
+      }
+    },
+    "formation": {
+      "web": {
+        "quantity": 1,
+        "size": "free"
+      }
+    },
+    "addons": [
+      {
+        "plan": "heroku-postgresql",
+        "options": {
+          "version": "11"
+        }
+      },
+      {
+        "plan": "papertrail:choklad"
+      }
+    ]
+  }
+  
