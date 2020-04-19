@@ -1,5 +1,7 @@
 # n8n-heroku
 
+![Docker](https://github.com/sarveshwarge/n8n-heroku/workflows/Docker/badge.svg)
+
 ### n8n(Nodemation) - Free and Open Workflow Automation Tool
 
 This is a [Heroku](https://heroku.com/) focused container implementation for the [n8n Automation Tool](https://n8n.io/). Just connect your fork of this repo to heroku and let it work as a charm!
