@@ -43,6 +43,24 @@ cd into your project directory
 
     cd n8n-heroku/
 
+login into heroku account
+    
+    heroku login
+    
+create heroku app
+
+    heroku create APP_NAME
+
+change app stack
+
+    heroku stack:set contaner --app APP_NAME
+    
+set config vars(optional)
+
+    heroku config:set N8N_BASIC_AUTH_ACTIVE=true
+    heroku config:set N8N_BASIC_AUTH_USER=SET_USERNAME
+    heroku config:set N8N_BASIC_AUTH_PASSWORD=SET_PASSWORD
+
 build and push container image to heroku
 
     heroku container:push web --app APP_NAME
