@@ -1,6 +1,6 @@
 {
     "name": "n8n",
-    "description": "n8n is free and open workflow automation tool",
+    "description": "deploy n8n to heroku without any hassle",
     "keywords": [
       "n8n",
       "node",
