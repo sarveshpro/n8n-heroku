@@ -92,6 +92,10 @@ release new build
 
 Maybe now you can specify which N8N version to install by Setting a Environment Variable N8N_VERSION or with a build time argument of the same. Not tested yet though, create an issue if it does't work. CI is passing so it is working correctly with default values.
 
+_Update - To set n8n version you can pass a argument when deploying using container registry_
+
+    heroku container:push web --arg N8N_VERSION=0.60.0 --app APP_NAME
+
 ### Sources
 
 https://github.com/n8n-io/n8n
