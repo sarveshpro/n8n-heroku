@@ -25,4 +25,4 @@ COPY ./start.sh /
 RUN chmod +x /start.sh
 
 # define execution entrypoint
-ENTRYPOINT ["/start.sh"]
+CMD ["/start.sh"]
