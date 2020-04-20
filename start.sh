@@ -11,7 +11,7 @@ parse_url() {
 # received url as argument
 ARG_URL=${1:-""}
 
-# if config vars detected
+# override if config vars detected
 if [ "$DATABASE_URL" ]
 then 
     ARG_URL=$DATABASE_URL
