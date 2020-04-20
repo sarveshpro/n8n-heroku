@@ -1,6 +1,4 @@
 setup:
-    stack: container
-    
     addons:
       - plan: heroku-postgresql
         as: DATABASE
