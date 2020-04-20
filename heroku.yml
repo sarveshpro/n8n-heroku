@@ -3,6 +3,11 @@ setup:
       - plan: heroku-postgresql
         as: DATABASE
 
+    config:
+        N8N_BASIC_AUTH_ACTIVE: true
+        N8N_BASIC_AUTH_USER: user
+        N8N_BASIC_AUTH_PASSWORD: pass
+
 build:
     docker:
         web: Dockerfile
