@@ -5,7 +5,7 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sarveshwarge/n8n-heroku/tree/develop)
 
 New method, just click, configure and get your n8n running.
-Also, now you can simply connect this Github repo and deploy, heroku uses default configuration from app.json
+Also, now set app stack to container and simply connect this Github repo and deploy, heroku uses default configuration from app.json
 
 default basic auth is user:pass
 
