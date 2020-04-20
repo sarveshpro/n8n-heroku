@@ -18,6 +18,6 @@ jobs:
           buildpack: ${{secrets.BUILDPACK}}
           branch: ${{secrets.BRANCH_TO_TEST}}
           dontuseforce: false #OPTIONAL and DEFAULT - false
-          usedocker: false #OPTIONAL and DEFAULT - false
+          usedocker: true #OPTIONAL and DEFAULT - false
           appdir: "" #OPTIONAL and DEFAULT - "". This is useful if the api you're deploying is in a subfolder
           docker_heroku_process_type: "" #OPTIONAL and DEFAULT - "web"
