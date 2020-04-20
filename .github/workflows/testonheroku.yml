@@ -3,7 +3,7 @@ name: Test Heroku
 on:
   push:
     branches:
-      - ${{secrets.BRANCH_TO_TEST}}
+      - develop
 
 jobs:
   build:
