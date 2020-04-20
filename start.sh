@@ -8,29 +8,29 @@ parse_url() {
   eval $(echo "$1" | sed -e "s#^\(\(.*\)://\)\?\(\([^:@]*\)\(:\(.*\)\)\?@\)\?\([^/?]*\)\(/\(.*\)\)\?#${PREFIX:-URL_}SCHEME='\2' ${PREFIX:-URL_}USER='\4' ${PREFIX:-URL_}PASSWORD='\6' ${PREFIX:-URL_}HOSTPORT='\7' ${PREFIX:-URL_}DATABASE='\9'#")
 }
 
+# received url as argument
+ARG_URL=${1:-""}
+
 # if config vars detected
 if [ "$DATABASE_URL" ]
 then 
-    ARG_URL=${1:-$DATABASE_URL}
+    ARG_URL=$DATABASE_URL
 	echo $DATABASE_URL;
 	echo "postgre config detected"
 
 elif [ "$MONGODB_URI" ]
 then 
-    ARG_URL=${1:-$MONGODB_URI}
+    ARG_URL=$MONGODB_URI
 	echo "mongo config detected"
 
 else
     echo "no config vars found"
 fi
 
-# received url as argument
-ARG_URL=${1:-"http://user:pass@example.com/path/somewhere"}
-
 # prefix variables to avoid conflicts and run parse url function on arg url
 PREFIX="N8N_DB_" parse_url "$ARG_URL"
 
-#echo "$N8N_DB_SCHEME://$N8N_DB_USER:$N8N_DB_PASSWORD@$N8N_DB_HOSTPORT/$N8N_DB_DATABASE"
+echo "$N8N_DB_SCHEME://$N8N_DB_USER:$N8N_DB_PASSWORD@$N8N_DB_HOSTPORT/$N8N_DB_DATABASE"
 
 # Separate host and port    
 N8N_DB_HOST="$(echo $N8N_DB_HOSTPORT | sed -e 's,:.*,,g')"
@@ -59,4 +59,4 @@ else
 fi
 
 # kickstart nodemation
-n8n
+# n8n
