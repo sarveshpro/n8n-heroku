@@ -17,8 +17,8 @@
         "value": "true"
       },
       "GENERIC_TIMEZONE": {
-        "description": "Time Zone to use with Heroku.",
-        "value": "Asia/Kolkata"
+        "description": "Time Zone to use with Heroku. You can find the name of your timezone here: https://momentjs.com/timezone/",
+        "value": "Europe/Berlin"
       },
       "N8N_BASIC_AUTH_USER": {
         "description": "Basic Authentication User for n8n",
@@ -41,6 +41,9 @@
         "options": {
           "version": "11"
         }
+      },
+      {
+        "plan": "papertrail:choklad"
       }
     ]
   }

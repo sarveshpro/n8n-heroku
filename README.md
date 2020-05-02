@@ -79,7 +79,7 @@ create heroku app
 
 change app stack
 
-    heroku stack:set contaner --app APP_NAME
+    heroku stack:set container --app APP_NAME
     
 set config vars(optional)
 

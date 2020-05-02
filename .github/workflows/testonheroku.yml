@@ -1,4 +1,4 @@
-name: Test Heroku
+name: Heroku
 
 on:
   push:
