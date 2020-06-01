@@ -87,6 +87,10 @@ set config vars(optional)
     heroku config:set N8N_BASIC_AUTH_USER=SET_USERNAME
     heroku config:set N8N_BASIC_AUTH_PASSWORD=SET_PASSWORD
 
+Login the container
+
+    heroku container:login
+
 build and push container image to heroku
 
     heroku container:push web --app APP_NAME
