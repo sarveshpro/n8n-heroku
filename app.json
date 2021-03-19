@@ -27,6 +27,18 @@
       "N8N_BASIC_AUTH_PASSWORD": {
         "description": "Basic Authentication Password to secure n8n.",
         "value": "pass"
+      },
+      "N8N_ENCRYPTION_KEY": {
+        "description": "This is to set the n8n encryption key to a static value, so that heroku doesnt override it, causing AUTH to fail",
+        "value": "MdRRn2jiZuVeh5tI77A6"
+      },
+      "PGSSLMODE": {
+        "description": "Heroku made a change so SSL is required to connect to Postgres",
+        "value": "require"
+      },
+      "NODE_TLS_REJECT_UNAUTHORIZED": {
+        "description": "Because Heroku SSL is self signed, SSL fails if this is not set to 0",
+        "value": 0
       }
     },
     "formation": {
