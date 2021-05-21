@@ -11,7 +11,7 @@ default basic auth is user:pass
 
 ### n8n(Nodemation) - Free and Open Workflow Automation Tool
 
-This is a [Heroku](https://heroku.com/) focused container implementation for the [n8n Automation Tool](https://n8n.io/). Just connect your fork of this repo to heroku and let it work as a charm!
+This is a [Heroku](https://heroku.com/) focused container implementation for the [n8n Automation Tool](https://n8n.io/). Just connect your fork to heroku and let it work as a charm!
 
 ## Requirements
 * Heroku CLI
