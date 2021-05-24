@@ -7,7 +7,7 @@
       "automation"
     ],
     "website": "https://n8n.io",
-    "repository": "https://github.com/sarveshwarge/n8n-heroku",
+    "repository": "https://github.com/melvin15may/n8n-heroku",
     "logo": "https://raw.githubusercontent.com/n8n-io/n8n/master/docs/images/n8n-logo.png",
     "success_url": "/",
     "stack": "container",
@@ -18,7 +18,7 @@
       },
       "GENERIC_TIMEZONE": {
         "description": "Time Zone to use with Heroku. You can find the name of your timezone here: https://momentjs.com/timezone/",
-        "value": "Europe/Berlin"
+        "value": "America/New_York"
       },
       "N8N_BASIC_AUTH_USER": {
         "description": "Basic Authentication User for n8n",
