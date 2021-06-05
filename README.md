@@ -18,7 +18,7 @@ This is a [Heroku](https://heroku.com/) focused container implementation for the
 
 ## Setup
 
-this is old setup guide not required now, connect this Github repo to heroku to auto configure. or click the above button to deploy without Github.
+this is old setup guide not required now, connect this GitHub repo to heroku to autoconfigure. or click the above button to deploy without GitHub.
 
 ### STEP 1: CHANGE your App Stack to container
 you can change your app's stack using heroku cli, make sure you have heroku cli installed.
