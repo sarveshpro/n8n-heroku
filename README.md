@@ -52,9 +52,13 @@ Same process is to be followed for using postgreSQL.
     DB_POSTGRESDB_DATABASE=POSTGRES_DB
     DB_POSTGRESDB_USER=POSTGRES_USER
     DB_POSTGRESDB_PASSWORD=POSTGRES_PASSWORD
+
+If some of your triggers depend on published app domain you may need to explicitly set url for yours n8n instance
+
+    WEBHOOK_URL=https://your-app.herokuapp.com
     
 
-### STEP 3: DONE! Now CONNECT Github repo and Deploy.
+### STEP 3: DONE! Now CONNECT GitHub repo and Deploy.
 
 ## Using Container Registry
 
