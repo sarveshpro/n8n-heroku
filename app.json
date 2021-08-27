@@ -8,7 +8,7 @@
     ],
     "website": "https://n8n.io",
     "repository": "https://github.com/sarveshwarge/n8n-heroku",
-    "logo": "https://raw.githubusercontent.com/n8n-io/n8n/master/docs/images/n8n-logo.png",
+    "logo": "https://raw.githubusercontent.com/n8n-io/n8n/master/packages/editor-ui/public/favicon-32x32.png",
     "success_url": "/",
     "stack": "container",
     "env": {
