@@ -39,6 +39,10 @@
       "NODE_TLS_REJECT_UNAUTHORIZED": {
         "description": "Because Heroku SSL is self signed, SSL fails if this is not set to 0",
         "value": 0
+      },
+      "WEBHOOK_URL": {
+        "description": "Your app could be published to any domain, without specifying n8n will think that it's hosted on localhost (and it could break some scenarions ",
+        "value": "https://<appname>.herokuapp.com"
       }
     },
     "formation": {

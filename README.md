@@ -18,7 +18,7 @@ This is a [Heroku](https://heroku.com/) focused container implementation for the
 
 ## Setup
 
-this is old setup guide not required now, connect this Github repo to heroku to auto configure. or click the above button to deploy without Github.
+this is old setup guide not required now, connect this GitHub repo to heroku to autoconfigure. or click the above button to deploy without GitHub.
 
 ### STEP 1: CHANGE your App Stack to container
 you can change your app's stack using heroku cli, make sure you have heroku cli installed.
@@ -52,9 +52,13 @@ Same process is to be followed for using postgreSQL.
     DB_POSTGRESDB_DATABASE=POSTGRES_DB
     DB_POSTGRESDB_USER=POSTGRES_USER
     DB_POSTGRESDB_PASSWORD=POSTGRES_PASSWORD
+
+If some of your triggers depend on published app domain you may need to explicitly set url for yours n8n instance
+
+    WEBHOOK_URL=https://your-app.herokuapp.com
     
 
-### STEP 3: DONE! Now CONNECT Github repo and Deploy.
+### STEP 3: DONE! Now CONNECT GitHub repo and Deploy.
 
 ## Using Container Registry
 
