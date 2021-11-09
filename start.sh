@@ -8,6 +8,10 @@ parse_url() {
   eval $(echo "$1" | sed -e "s#^\(\(.*\)://\)\?\(\([^:@]*\)\(:\(.*\)\)\?@\)\?\([^/?]*\)\(/\(.*\)\)\?#${PREFIX:-URL_}SCHEME='\2' ${PREFIX:-URL_}USER='\4' ${PREFIX:-URL_}PASSWORD='\6' ${PREFIX:-URL_}HOSTPORT='\7' ${PREFIX:-URL_}DATABASE='\9'#")
 }
 
+export N8N_DIAGNOSTICS_ENABLED=false
+
+
+
 # received url as argument
 ARG_URL=${1:-""}
 
