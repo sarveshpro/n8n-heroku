@@ -4,6 +4,8 @@
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sarveshwarge/n8n-heroku)
 
+#### [ Open Source Contributors feel free to maintain this repository ]
+
 New method, just click, configure and get your n8n running.
 Also, now set app stack to container and simply connect this Github repo and deploy, heroku uses default configuration from app.json
 
