@@ -10,4 +10,4 @@ setup:
 
 build:
     docker:
-        web: Dockerfile
+        web: dockerfiles/Dockerfile
