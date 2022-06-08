@@ -39,5 +39,7 @@ COPY ./start.sh /
 # make the script executable
 RUN chmod +x /start.sh
 
+EXPOSE 5678/tcp
+
 # define execution entrypoint
 CMD ["/start.sh"]
