@@ -1,13 +1,13 @@
 {
     "name": "n8n",
-    "description": "deploy n8n to heroku without any hassle",
+    "description": "deploy n8n to heroku without any hassle, with Tailscale",
     "keywords": [
       "n8n",
       "node",
       "automation"
     ],
     "website": "https://n8n.io",
-    "repository": "https://github.com/sarveshwarge/n8n-heroku",
+    "repository": "https://github.com/ctrl-design/n8n-heroku",
     "logo": "https://raw.githubusercontent.com/n8n-io/n8n/master/packages/editor-ui/public/favicon-32x32.png",
     "success_url": "/",
     "stack": "container",
@@ -43,6 +43,10 @@
       "WEBHOOK_URL": {
         "description": "Your app could be published to any domain, without specifying n8n will think that it's hosted on localhost (and it could break some scenarions ",
         "value": "https://<appname>.herokuapp.com"
+      },
+      "TAILSCALE_AUTHKEY": {
+        "description": "Tailscale Auth Key",
+        "value": "tskey-"
       }
     },
     "formation": {
