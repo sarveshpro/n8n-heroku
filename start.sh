@@ -16,7 +16,7 @@ if [ "$DATABASE_URL" ]
 then 
     ARG_URL=$DATABASE_URL
 	echo $DATABASE_URL;
-	echo "postgre config detected"
+	echo "postgres config detected"
 
 elif [ "$MONGODB_URI" ]
 then 
