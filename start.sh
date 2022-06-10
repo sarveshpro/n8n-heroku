@@ -65,7 +65,7 @@ fi
 /data/tailscaled --tun=userspace-networking --socks5-server=localhost:1055 &
 /data/tailscale up --authkey=${TAILSCALE_AUTHKEY} --hostname=heroku-n8n
 echo "Tailscale started"
-# ALL_PROXY=socks5://localhost:1055/ n8n
 
 # kickstart nodemation
-n8n
+#n8n
+ALL_PROXY=socks5://localhost:1055/ n8n
