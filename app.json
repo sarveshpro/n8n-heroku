@@ -47,6 +47,14 @@
       "TAILSCALE_AUTHKEY": {
         "description": "Tailscale Auth Key",
         "value": "tskey-"
+      },
+      "EXECUTIONS_DATA_PRUNE": {
+        "description": "Enable data pruning to automatically delete execution old data",
+        "value": "true"
+      },
+      "EXECUTIONS_DATA_MAX_AGE": {
+        "description": "Data pruning time period in hours",
+        "value": "168"
       }
     },
     "formation": {
