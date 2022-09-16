@@ -15,7 +15,6 @@ ARG_URL=${1:-""}
 if [ "$DATABASE_URL" ]
 then 
     ARG_URL=$DATABASE_URL
-	echo $DATABASE_URL;
 	echo "postgres config detected"
 
 elif [ "$MONGODB_URI" ]
@@ -66,10 +65,15 @@ if [ "$REDIS_URL" ]
 then 
 	echo "redis config detected"
 	PREFIX="N8N_REDIS_" parse_url "$REDIS_URL"
+	# Separate host and port    
+	N8N_REDIS_HOST="$(echo $N8N_REDIS_HOSTPORT | sed -e 's,:.*,,g')"
+	N8N_REDIS_PORT="$(echo $N8N_REDIS_HOSTPORT | sed -e 's,^.*:,:,g' -e 's,.*:\([0-9]*\).*,\1,g' -e 's,[^0-9],,g')"
 	export QUEUE_BULL_REDIS_HOST=$N8N_REDIS_HOST
 	export QUEUE_BULL_REDIS_PORT=$N8N_REDIS_PORT
 	export QUEUE_BULL_REDIS_PASSWORD=$N8N_REDIS_PASSWORD
 fi
+
+echo "$N8N_REDIS_SCHEME://:$N8N_REDIS_PASSWORD@$N8N_REDIS_HOST:$N8N_REDIS_PORT/"
 
 # kickstart nodemation
 n8n worker
