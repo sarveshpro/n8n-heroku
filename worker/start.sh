@@ -73,7 +73,5 @@ then
 	export QUEUE_BULL_REDIS_PASSWORD=$N8N_REDIS_PASSWORD
 fi
 
-echo "$N8N_REDIS_SCHEME://:$N8N_REDIS_PASSWORD@$N8N_REDIS_HOST:$N8N_REDIS_PORT/"
-
 # kickstart nodemation
 n8n worker

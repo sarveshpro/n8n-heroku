@@ -61,5 +61,18 @@ else
 	echo "invalid url arg"
 fi
 
+# parse REDIS_URL if present
+if [ "$REDIS_URL" ]
+then 
+	echo "redis config detected"
+	PREFIX="N8N_REDIS_" parse_url "$REDIS_URL"
+	# Separate host and port    
+	N8N_REDIS_HOST="$(echo $N8N_REDIS_HOSTPORT | sed -e 's,:.*,,g')"
+	N8N_REDIS_PORT="$(echo $N8N_REDIS_HOSTPORT | sed -e 's,^.*:,:,g' -e 's,.*:\([0-9]*\).*,\1,g' -e 's,[^0-9],,g')"
+	export QUEUE_BULL_REDIS_HOST=$N8N_REDIS_HOST
+	export QUEUE_BULL_REDIS_PORT=$N8N_REDIS_PORT
+	export QUEUE_BULL_REDIS_PASSWORD=$N8N_REDIS_PASSWORD
+fi
+
 # kickstart nodemation
 n8n
