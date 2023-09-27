@@ -2,7 +2,7 @@ FROM node:lts-alpine
 
 # pass N8N_VERSION Argument while building or use default
 
-ARG N8N_VERSION=1.7.1
+ARG N8N_VERSION=1.8.2
 
 # Update everything and install needed dependencies
 RUN apk add --update graphicsmagick tzdata
