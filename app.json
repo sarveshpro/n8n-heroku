@@ -48,11 +48,11 @@
   "formation": {
     "web": {
       "quantity": 1,
-      "size": "free"
+      "size": "Eco"
     },
     "worker": {
       "quantity": 1,
-      "size": "free"
+      "size": "Eco"
     }
   },
   "addons": [
