@@ -74,5 +74,10 @@ then
 	export QUEUE_BULL_REDIS_PASSWORD=$N8N_REDIS_PASSWORD
 fi
 
+# Set data pruning environment variables
+export EXECUTIONS_DATA_PRUNE=true
+export EXECUTIONS_DATA_MAX_AGE=2160  # Max age in hours
+export EXECUTIONS_DATA_PRUNE_MAX_COUNT=500000
+
 # kickstart nodemation
 n8n
