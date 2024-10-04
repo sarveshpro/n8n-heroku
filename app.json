@@ -28,9 +28,13 @@
       "description": "Heroku SSL is self signed, SSL fails if this is not set to 0",
       "value": "0"
     },
-    "WEBHOOK_URL": {
+    "WEBHOOK_URLQUEUE_BULL_REDIS_TLS": {
       "description": "Your app could be published to any domain, without specifying n8n will think that it's hosted on localhost (and it could break some scenarions ",
       "value": "https://<appname>.herokuapp.com"
+    },
+    "QUEUE_BULL_REDIS_TLS": {
+      "description": "Heroku is enforcing TLS on all redis mini plans starting December 2024.",
+      "value": "true"
     },
     "EXECUTIONS_MODE": {
       "description": "Supports: regular, queue. Queue Mode enables Worker Dyno to process events. If you do not plan on using worker dyno, set worker dyno count to 0 and set execution mode it to regular.",
