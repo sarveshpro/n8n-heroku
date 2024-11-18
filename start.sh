@@ -33,6 +33,12 @@ then
 	export QUEUE_BULL_REDIS_HOST=$N8N_REDIS_HOST
 	export QUEUE_BULL_REDIS_PORT=$N8N_REDIS_PORT
 	export QUEUE_BULL_REDIS_PASSWORD=$N8N_REDIS_PASSWORD
+
+	# Check if URL starts with rediss://
+	if [ "${N8N_REDIS_SCHEME}" = "rediss" ]; then
+		export QUEUE_BULL_REDIS_TLS=true
+		echo "Redis connection over TLS detected, setting QUEUE_BULL_REDIS_TLS=true"
+	fi
 fi
 
 # kickstart nodemation
