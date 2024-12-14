@@ -1,0 +1,6 @@
+{
+  "name": "davids-n8n",
+  "engines": {
+    "node": "18.x"
+  }
+}
